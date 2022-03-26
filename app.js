@@ -5,19 +5,19 @@ const app = express();
 app.use(express.static('public'));
 
 app.get('/', (request, response) => {
-  response.send('Home page');
+  response.sendFile(__dirname + '/views/home.html');
 });
 
 app.get('/about', (request, response) => {
-  response.send('About page');
+  response.sendFile(__dirname + '/views/about.html');
 });
 
 app.get('/works', (request, response) => {
-  response.send('Work page');
+  response.sendFile(__dirname + '/views/works.html');
 });
 
 app.get('/photo', (request, response) => {
-  response.send('Photo page');
+  response.sendFile(__dirname + '/views/gallery.html');
 });
 
 app.listen(3000);
